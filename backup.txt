@@ -8,14 +8,14 @@
   <meta name="description" content="Últimas notícias das cidades de Vitória, Vila Velha e Serra no Espírito Santo. Fique por dentro das principais atualizações locais.">
   <meta name="keywords" content="Notícias Espírito Santo, Vitória ES, Vila Velha ES, Serra ES, notícias locais, jornal online">
   <meta name="author" content="Seu Nome ou Nome do Site">
-  <link rel="canonical" href="https://www.seusite.com.br" />
+ 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Notícias do Espírito Santo: Vitória, Vila Velha e Serra" />
   <meta property="og:description" content="Veja as últimas notícias de Vitória, Vila Velha e Serra (ES)." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.seusite.com.br" />
+ 
   <meta property="og:image" content="https://www.seusite.com.br/imagem-de-capa.jpg" />
 
   <style>
@@ -23,6 +23,13 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    #ads{
+        position: fixed;
+        width:300px;
+        height: 200px;
+        border-radius: 9px;
+        display: block;
     }
 
     body {
@@ -184,5 +191,8 @@
     const idUnico = gerarIdUnico();
     footer.innerHTML = `<p style="text-align:center; color:gray;">ID único da sessão: <strong>${idUnico}</strong></p>`;
   </script>
+<div id="ads">
+    <a href="propaganda.html">CONFERIR</a>
+</div>
 </body>
 </html>

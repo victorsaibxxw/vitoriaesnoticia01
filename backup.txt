@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ganhe Dinheiro com o Airbnb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #FF5A5F;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #FF5A5F;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e0484d;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💸 Ganhe Dinheiro com o Airbnb!</h1>
+    <p>Cadastre-se no Airbnb e comece a ganhar dinheiro alugando um espaço ou indicando amigos.</p>
+    <p>Use meu link especial e ganhe vantagens exclusivas:</p>
+    <a href="https://www.airbnb.com.br/rp/saibvictore?p=stay&s=67&unique_share_id=f6df6ec5-d311-4400-9a52-f3387326e145" class="btn" target="_blank">
+      👉 Comece agora
+    </a>
+    <p class="footer">*Válido apenas para novos usuários do Airbnb.</p>
+  </div>
+</body>
+</html>

@@ -1,88 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <style>
-    /* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #004aad;
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Container de notícias */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-article {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid #004aad;
-  border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-
-article h2 {
-  font-size: 1.4rem;
-  color: #004aad;
-  margin-bottom: 10px;
-}
-
-article p {
-  margin-bottom: 10px;
-}
-
-/* Rodapé */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #777;
-}
-
-  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notícias do Espírito Santo: Vitória, Vila Velha e Serra</title>
@@ -93,15 +11,90 @@ footer {
   <link rel="canonical" href="https://www.seusite.com.br" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph (para redes sociais) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Notícias do Espírito Santo: Vitória, Vila Velha e Serra" />
   <meta property="og:description" content="Veja as últimas notícias de Vitória, Vila Velha e Serra (ES)." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.seusite.com.br" />
   <meta property="og:image" content="https://www.seusite.com.br/imagem-de-capa.jpg" />
 
-  <!-- CSS Externo -->
-  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    article {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #004aad;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    article h2 {
+      font-size: 1.4rem;
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -116,15 +109,80 @@ footer {
   </header>
 
   <main id="noticias-container">
-    <!-- Notícias inseridas dinamicamente -->
+    <!-- Notícias serão adicionadas aqui via JS -->
   </main>
 
   <footer id="footer-id">
-    <!-- ID único inserido via JavaScript -->
+    <!-- ID único da sessão será adicionado via JS -->
   </footer>
 
-  <!-- JS separado -->
-  <script src="noticia.js"></script>
-  <script src="render.js"></script>
+  <script>
+    // Dados das notícias
+    const noticias = [
+      {
+        titulo: "Nova orla revitalizada em Vitória atrai turistas",
+        cidade: "Vitória",
+        conteudo: "A nova orla da capital foi entregue nesta semana, com pista de caminhada, ciclovia e quiosques modernos. A prefeitura destacou a importância da obra para o turismo local."
+      },
+      {
+        titulo: "Vila Velha inaugura novo terminal de ônibus",
+        cidade: "Vila Velha",
+        conteudo: "O terminal de Itaparica começou a operar nesta segunda-feira, oferecendo mais conforto, segurança e integração entre as linhas municipais e intermunicipais."
+      },
+      {
+        titulo: "Serra lança projeto de educação ambiental nas escolas",
+        cidade: "Serra",
+        conteudo: "A prefeitura da Serra iniciou um projeto educacional voltado à sustentabilidade e preservação do meio ambiente, envolvendo mais de 12 mil alunos da rede pública."
+      },
+      {
+        titulo: "Vitória recebe feira de gastronomia regional neste fim de semana",
+        cidade: "Vitória",
+        conteudo: "Chefs capixabas apresentarão pratos típicos no evento gastronômico que acontece na Praça do Papa, promovendo cultura e economia local."
+      },
+      {
+        titulo: "Serra amplia rede de saúde com nova UPA em Feu Rosa",
+        cidade: "Serra",
+        conteudo: "A nova unidade de pronto atendimento de Feu Rosa começou a funcionar nesta semana, com capacidade para 400 atendimentos diários."
+      },
+      {
+        titulo: "Obras de mobilidade avançam em Vila Velha",
+        cidade: "Vila Velha",
+        conteudo: "A duplicação da Avenida Carlos Lindenberg segue em ritmo acelerado, com previsão de entrega para o segundo semestre deste ano."
+      }
+    ];
+
+    // Renderizar notícias
+    const container = document.getElementById('noticias-container');
+
+    noticias.forEach((noticia) => {
+      const article = document.createElement('article');
+      article.setAttribute("itemscope", "");
+      article.setAttribute("itemtype", "https://schema.org/NewsArticle");
+
+      article.innerHTML = `
+        <h2 itemprop="headline">${noticia.titulo}</h2>
+        <p><strong>Cidade:</strong> <span itemprop="locationCreated">${noticia.cidade}</span></p>
+        <p itemprop="articleBody">${noticia.conteudo}</p>
+        <hr/>
+      `;
+
+      container.appendChild(article);
+    });
+
+    // Gerar ID único
+    function gerarIdUnico(tamanho = 8) {
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let resultado = '';
+      for (let i = 0; i < tamanho; i++) {
+        const indice = Math.floor(Math.random() * caracteres.length);
+        resultado += caracteres[indice];
+      }
+      return resultado;
+    }
+
+    const footer = document.getElementById('footer-id');
+    const idUnico = gerarIdUnico();
+    footer.innerHTML = `<p style="text-align:center; color:gray;">ID único da sessão: <strong>${idUnico}</strong></p>`;
+  </script>
 </body>
 </html>

@@ -216,7 +216,7 @@
   </script>
 
   <div id="ads">
-    <a href="propaganda.html" target="_blank" rel="noopener noreferrer">CONFERIR</a>
+    <a href="propaganda.html" target="_blank" rel="noopener noreferrer"> Ganhe Dinheiro com o Airbnb!</a>
   </div>
 </body>
 </html>

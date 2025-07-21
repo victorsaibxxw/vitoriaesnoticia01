@@ -1,6 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <style>
+    /* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004aad;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container de notícias */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+article {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #004aad;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+article h2 {
+  font-size: 1.4rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+article p {
+  margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+}
+
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notícias do Espírito Santo: Vitória, Vila Velha e Serra</title>
@@ -18,87 +100,8 @@
   <meta property="og:url" content="https://www.seusite.com.br" />
   <meta property="og:image" content="https://www.seusite.com.br/imagem-de-capa.jpg" />
 
-  <style>
-    /* Reset e base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-
-    /* Cabeçalho */
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 20px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Container de notícias */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    article {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 5px solid #004aad;
-      border-radius: 4px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
-
-    article h2 {
-      font-size: 1.4rem;
-      color: #004aad;
-      margin-bottom: 10px;
-    }
-
-    article p {
-      margin-bottom: 10px;
-    }
-
-    /* Rodapé */
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <header>
@@ -120,39 +123,8 @@
     <!-- ID único inserido via JavaScript -->
   </footer>
 
-  <!-- JavaScript externo com as notícias -->
+  <!-- JS separado -->
   <script src="scripts/noticia.js"></script>
-
-  <!-- Script para exibir notícias e gerar ID -->
-  <script>
-    const container = document.getElementById('noticias-container');
-
-    noticias.forEach((noticia) => {
-      const article = document.createElement('article');
-      article.setAttribute("itemscope", "");
-      article.setAttribute("itemtype", "https://schema.org/NewsArticle");
-      article.innerHTML = `
-        <h2 itemprop="headline">${noticia.titulo}</h2>
-        <p><strong>Cidade:</strong> <span itemprop="locationCreated">${noticia.cidade}</span></p>
-        <p itemprop="articleBody">${noticia.conteudo}</p>
-        <hr/>
-      `;
-      container.appendChild(article);
-    });
-
-    function gerarIdUnico(tamanho = 8) {
-      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-      let resultado = '';
-      for (let i = 0; i < tamanho; i++) {
-        const indice = Math.floor(Math.random() * caracteres.length);
-        resultado += caracteres[indice];
-      }
-      return resultado;
-    }
-
-    const footer = document.getElementById('footer-id');
-    const idUnico = gerarIdUnico();
-    footer.innerHTML = `<p style="text-align:center; color:gray;">ID único da sessão: <strong>${idUnico}</strong></p>`;
-  </script>
+  <script src="scripts/render.js"></script>
 </body>
 </html>

@@ -8,14 +8,14 @@
   <meta name="description" content="Últimas notícias das cidades de Vitória, Vila Velha e Serra no Espírito Santo. Fique por dentro das principais atualizações locais.">
   <meta name="keywords" content="Notícias Espírito Santo, Vitória ES, Vila Velha ES, Serra ES, notícias locais, jornal online">
   <meta name="author" content="Seu Nome ou Nome do Site">
- 
+  <link rel="canonical" href="https://www.seusite.com.br" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Notícias do Espírito Santo: Vitória, Vila Velha e Serra" />
   <meta property="og:description" content="Veja as últimas notícias de Vitória, Vila Velha e Serra (ES)." />
   <meta property="og:type" content="website" />
- 
+  <meta property="og:url" content="https://www.seusite.com.br" />
   <meta property="og:image" content="https://www.seusite.com.br/imagem-de-capa.jpg" />
 
   <style>
@@ -24,13 +24,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-    #ads{
-        position: fixed;
-        width:300px;
-        height: 200px;
-        border-radius: 9px;
-        display: block;
-    }
 
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -38,6 +31,7 @@
       color: #333;
       line-height: 1.6;
       padding: 20px;
+      padding-right: 340px; /* espaço para o anúncio à direita */
     }
 
     header {
@@ -101,6 +95,38 @@
       font-size: 0.9em;
       color: #777;
     }
+
+    /* Anúncio fixo */
+    #ads {
+      position: fixed;
+      top: 80px; /* abaixo do header */
+      right: 20px;
+      width: 300px;
+      height: 200px;
+      background-color: #e0e0e0;
+      border-radius: 9px;
+      padding: 20px 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #ads a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #004aad;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #ads a:hover {
+      background-color: #002d72;
+    }
   </style>
 </head>
 <body>
@@ -124,7 +150,6 @@
   </footer>
 
   <script>
-    // Dados das notícias
     const noticias = [
       {
         titulo: "Nova orla revitalizada em Vitória atrai turistas",
@@ -158,7 +183,6 @@
       }
     ];
 
-    // Renderizar notícias
     const container = document.getElementById('noticias-container');
 
     noticias.forEach((noticia) => {
@@ -176,7 +200,6 @@
       container.appendChild(article);
     });
 
-    // Gerar ID único
     function gerarIdUnico(tamanho = 8) {
       const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       let resultado = '';
@@ -191,8 +214,9 @@
     const idUnico = gerarIdUnico();
     footer.innerHTML = `<p style="text-align:center; color:gray;">ID único da sessão: <strong>${idUnico}</strong></p>`;
   </script>
-<div id="ads">
-    <a href="propaganda.html">CONFERIR</a>
-</div>
+
+  <div id="ads">
+    <a href="propaganda.html" target="_blank" rel="noopener noreferrer">CONFERIR</a>
+  </div>
 </body>
 </html>

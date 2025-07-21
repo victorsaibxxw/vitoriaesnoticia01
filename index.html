@@ -24,6 +24,13 @@
       padding: 0;
       box-sizing: border-box;
     }
+    #ads{
+        position: fixed;
+        width:300px;
+        height: 200px;
+        border-radius: 9px;
+        display: block;
+    }
 
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -184,5 +191,8 @@
     const idUnico = gerarIdUnico();
     footer.innerHTML = `<p style="text-align:center; color:gray;">ID único da sessão: <strong>${idUnico}</strong></p>`;
   </script>
+<div id="ads">
+    <a href="propaganda.html">CONFERIR</a>
+</div>
 </body>
 </html>
